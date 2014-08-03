@@ -1,0 +1,13 @@
+# Site settings
+title: Charlie Knudsen
+email: charlie.knudsen@gmail.com
+description: "Charlie Knudsen's Blog"
+baseurl: ""
+url: "http://charliek.github.io"
+twitter_username: cjknudsen
+github_username:  charliek
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+highlighter: pygments
