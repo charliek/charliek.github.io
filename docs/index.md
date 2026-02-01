@@ -1,6 +1,6 @@
 # Projects
 
-## [shed](https://github.com/charliek/shed)
+## [shed](https://charliek.github.io/shed/)
 
 A lightweight tool for managing persistent, containerized development environments across multiple servers. Enables developers to spin up isolated coding sessions with AI tools pre-installed, disconnect, and reconnect later to continue work.
 
