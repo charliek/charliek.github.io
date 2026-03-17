@@ -8,6 +8,14 @@ A lightweight tool for managing persistent, containerized development environmen
 
 A modern process manager for development with an API-first design. Features a simple Procfile-like experience, full HTTP API for process control, interactive TUI with real-time log viewing, and optional health checks.
 
+## [envsecrets](https://charliek.github.io/envsecrets/)
+
+A CLI tool for managing encrypted environment files using Google Cloud Storage and age encryption. Provides a git-like push/pull workflow for secure team-wide access to environment configuration with full version history.
+
+## [codely](https://charliek.github.io/codely/)
+
+An AI coding session manager that provides a single pane of glass for orchestrating multiple AI coding sessions across local directories and remote development containers. Features a terminal UI with real-time status monitoring and seamless switching between local and remote environments.
+
 ## [sltasks](https://charliek.github.io/sltasks/)
 
 Terminal-based Kanban TUI for markdown task management. A lightweight, keyboard-driven task management tool that runs in your terminal. Tasks are stored as plain Markdown files with YAML frontmatter.
