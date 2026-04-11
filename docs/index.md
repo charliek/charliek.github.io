@@ -4,6 +4,10 @@
 
 A lightweight tool for managing persistent, containerized development environments across multiple servers. Enables developers to spin up isolated coding sessions with AI tools pre-installed, disconnect, and reconnect later to continue work.
 
+## [shed-extensions](https://charliek.github.io/shed-extensions/)
+
+Secure credential brokering for shed microVM development environments. Credentials never enter the VM — all signing and secret resolution happens on the host, mediated by shed's plugin message bus. Supports SSH agent forwarding, AWS STS credential vending, and Docker registry credential brokering.
+
 ## [prox](https://charliek.github.io/prox/)
 
 A modern process manager for development with an API-first design. Features a simple Procfile-like experience, full HTTP API for process control, interactive TUI with real-time log viewing, and optional health checks.
