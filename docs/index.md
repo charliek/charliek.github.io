@@ -16,6 +16,10 @@ A modern process manager for development with an API-first design. Features a si
 
 A CLI tool for managing encrypted environment files using Google Cloud Storage and age encryption. Provides a git-like push/pull workflow for secure team-wide access to environment configuration with full version history.
 
+## [folio](https://charliek.github.io/folio/)
+
+A self-hosted private documentation platform. Provides a Go server that authenticates users and serves static documentation sites from Google Cloud Storage, plus reusable GitHub Actions workflows that build and publish documentation from any repository.
+
 ## [codely](https://charliek.github.io/codely/)
 
 An AI coding session manager that provides a single pane of glass for orchestrating multiple AI coding sessions across local directories and remote development containers. Features a terminal UI with real-time status monitoring and seamless switching between local and remote environments.
