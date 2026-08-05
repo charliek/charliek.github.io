@@ -7,19 +7,19 @@ Project index page for Charlie Knudsen's GitHub projects.
 Install dependencies:
 
 ```bash
-uv sync --group docs
+uv sync --locked --group docs
 ```
 
 Serve locally:
 
 ```bash
-uv run mkdocs serve
+uv run --locked zensical serve
 ```
 
 Build static site:
 
 ```bash
-uv run mkdocs build
+uv run --locked zensical build --strict
 ```
 
 ## Deployment

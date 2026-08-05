@@ -5,7 +5,9 @@ on:
     branches: [main]
     paths:
       - 'docs/**'
-      - 'mkdocs.yml'
+      - 'zensical.toml'
+      - 'pyproject.toml'
+      - 'uv.lock'
       - '.github/workflows/docs.yml'
   workflow_dispatch:
 
@@ -22,22 +24,15 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-
-      - name: Install uv
-        uses: astral-sh/setup-uv@v4
-
-      - name: Set up Python
-        run: uv python install 3.13
-
-      - name: Install dependencies
-        run: uv sync --group docs
-
-      - name: Build documentation
-        run: uv run mkdocs build
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      # setup-uv publishes no moving major tag -- v9 does not resolve.
+      - uses: astral-sh/setup-uv@v9.0.0
+      - run: uv python install 3.13
+      - run: uv sync --locked --group docs
+      - run: uv run --locked zensical build --strict
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: site-build
 
@@ -50,4 +45,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
