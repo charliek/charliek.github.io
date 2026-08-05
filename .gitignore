@@ -1,3 +1,7 @@
 site-build/
 .venv/
 .idea/
+
+# Zensical differential-build cache (root only -- the anchor keeps this from
+# also swallowing a nested .cache/ elsewhere in the tree)
+/.cache/
