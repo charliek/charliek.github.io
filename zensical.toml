@@ -1,0 +1,74 @@
+[project]
+
+site_name = "charliek.github.io"
+site_description = "Project index for Charlie Knudsen"
+site_author = "Charlie Knudsen"
+site_url = "https://charliek.github.io/"
+
+repo_name = "charliek/charliek.github.io"
+repo_url = "https://github.com/charliek/charliek.github.io"
+edit_uri = "edit/main/docs/"
+
+docs_dir = "docs"
+site_dir = "site-build"
+
+dev_addr = "127.0.0.1:8000"
+
+nav = [
+  { "Home" = "index.md" },
+]
+
+# -----------------------------------------------------------------------------
+# Theme
+# -----------------------------------------------------------------------------
+# The shared StrideLabs theme (stridelabs-docs-theme, pinned in pyproject.toml)
+# supplies the palette, the self-hosted type stack, the feature toggles, and
+# the owl + project-icon header lockup. Anything set here overrides it.
+#
+# Do NOT add a [project.theme.font] table: the theme sets `font: false` and
+# ships its own woff2 faces, so setting one re-enables Zensical's Google Fonts
+# <link> on every page while the self-hosted faces keep loading anyway.
+[project.theme]
+name = "stridelabs"
+
+# The icon that says *which* site this is -- rendered beside the shared owl.
+# This one is the index of the projects, hence the repo stack.
+[project.theme.icon]
+logo = "material/source-repository-multiple"
+
+# -----------------------------------------------------------------------------
+# Extra
+# -----------------------------------------------------------------------------
+[[project.extra.social]]
+icon = "fontawesome/brands/github"
+link = "https://github.com/charliek"
+
+# -----------------------------------------------------------------------------
+# Markdown extensions
+# -----------------------------------------------------------------------------
+[project.markdown_extensions.admonition]
+[project.markdown_extensions.attr_list]
+[project.markdown_extensions.md_in_html]
+
+[project.markdown_extensions.toc]
+permalink = true
+
+[project.markdown_extensions.pymdownx.details]
+
+# NOTE: the callable namespace is "zensical.extensions.emoji", not
+# "material.extensions.emoji" - the latter aborts the build under Zensical.
+[project.markdown_extensions.pymdownx.emoji]
+emoji_generator = "zensical.extensions.emoji.to_svg"
+emoji_index = "zensical.extensions.emoji.twemoji"
+
+[project.markdown_extensions.pymdownx.highlight]
+anchor_linenums = true
+line_spans = "__span"
+pygments_lang_class = true
+
+[project.markdown_extensions.pymdownx.inlinehilite]
+[project.markdown_extensions.pymdownx.snippets]
+[project.markdown_extensions.pymdownx.superfences]
+
+[project.markdown_extensions.pymdownx.tabbed]
+alternate_style = true
